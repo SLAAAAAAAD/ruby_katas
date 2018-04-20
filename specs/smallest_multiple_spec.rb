@@ -1,6 +1,5 @@
 require 'rspec'
 require_relative '../katas/smallest_multiple'
-# require_relative '../solutions/smallest_multiple'
 
 describe 'should return the smallest possible multiple' do
   it 'should return the smallest possible multiple' do
