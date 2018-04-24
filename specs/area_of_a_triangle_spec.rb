@@ -24,7 +24,7 @@ describe 'it should return the area of a triangle defined by three points' do
 
   it 'should have a certain degree of accuracy' do
     triangle = three_points -2, -2, 2, 0, 0, 2
-    a = Math.sqrt(8) * 1.5 * math.sqrt(2)
+    a = Math.sqrt(8) * 1.5 * Math.sqrt(2)
     b = (area_of_triangle triangle[0], triangle[1], triangle[2])
     error_percent = 100 - 100 * b / a
     expect(error_percent).to be < 1
