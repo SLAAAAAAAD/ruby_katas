@@ -28,6 +28,7 @@ def area_of_triangle(p0, p1, p2)
 
   # if p2.y is negative, you need to flip the end result because areas can't be negative
   a *= -1 if a < 0
+  a
 end
 
 class Point
