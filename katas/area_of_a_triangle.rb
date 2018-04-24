@@ -45,7 +45,8 @@ class Point
   end
 
   # returns the angle from the positive x axis in radians.
-  # yes the x and y are meant flipped in the method call.
+  # yes the x and y are meant to be flipped in the method call,
+  # because of the order they show up in the maths: tan = y / x
   def angle
     Math.atan2(@y, @x)
   end
