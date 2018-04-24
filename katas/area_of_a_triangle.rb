@@ -24,11 +24,10 @@ def area_of_triangle(p0, p1, p2)
 
   # b = p1.x because p1 is on the x axis now
   # h = p2.y because the triangle is now laying flat and p2.y is the farthest point from the x axis
-  a = p1.x * p2.y / 2
-
-  # if p2.y is negative, you need to flip the end result because areas can't be negative
-  a *= -1 if a < 0
-  a
+  # Math.sqrt(a**2) is equivalent to the absolute value of a,
+  # but for some reason the Ruby Math class does not have Math.abs()
+  # you need to take the absolute value because negative p2.y values will give a negative area
+  Math.sqrt((p1.x * p2.y / 2) ** 2)
 end
 
 class Point
