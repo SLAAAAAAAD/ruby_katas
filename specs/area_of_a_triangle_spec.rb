@@ -22,9 +22,9 @@ describe 'it should return the area of a triangle defined by three points' do
     expect(area_of_triangle triangle[0], triangle[1], triangle[2]).to eq 6
   end
 
-  it 'should be accurate within 1%' do
-    triangle = three_points 2, 0, -3, -3, 0, 2
-    a = Math.sqrt(8) * 2 * Math.sqrt(2)
+  it 'should be accurate to within 1%' do
+    triangle = three_points (-4 * Math::PI), (2 * Math::PI), (-4 * Math::PI), (-1 * Math::PI), 0, (-1 * Math::PI)
+    a = 6 * Math::PI ** 2
     b = (area_of_triangle triangle[0], triangle[1], triangle[2])
     error_percent = 100 - 100 * b / a
     expect(error_percent).to be < 1
