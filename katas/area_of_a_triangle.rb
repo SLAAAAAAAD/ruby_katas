@@ -7,7 +7,14 @@
 # A simple Point class is provided, though you may add to it if you wish
 
 def area_of_triangle(p0, p1, p2)
-  # your awesome code here
+  p1.translate (0 - p0.x), (0 - p0.y)
+  p2.translate (0 - p0.x), (0 - p0.y)
+  p0.translate (0 - p0.x), (0 - p0.y)
+
+  p2.rotate(0 - p1.angle)
+  p1.rotate(0 - p1.angle)
+
+  p1.x * p2.y / 2
 end
 
 class Point
@@ -17,5 +24,19 @@ class Point
     @x = x
     @y = y
   end
-  # more of your awesome code here if you wish
+
+  def translate(x, y)
+    @x += x
+    @y += y
+  end
+
+  def angle
+    Math.atan2(@y, @x)
+  end
+
+  def rotate(angle)
+    c = Complex(@x, @y) * Math::E ** (Complex(0, 1) * angle)
+    @x = c.rect[0]
+    @y = c.rect[1]
+  end
 end
