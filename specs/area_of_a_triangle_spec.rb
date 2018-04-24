@@ -22,7 +22,7 @@ describe 'it should return the area of a triangle defined by three points' do
     expect(area_of_triangle triangle[0], triangle[1], triangle[2]).to eq 6
   end
 
-  it 'should have a certain degree of accuracy' do
+  it 'should be accurate to within 1%' do
     triangle = three_points (-4 * Math::PI), (2 * Math::PI), (-4 * Math::PI), (-1 * Math::PI), 0, (-1 * Math::PI)
     a = 6 * Math::PI ** 2
     b = (area_of_triangle triangle[0], triangle[1], triangle[2])
