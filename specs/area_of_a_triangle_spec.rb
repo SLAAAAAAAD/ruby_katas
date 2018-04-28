@@ -13,8 +13,8 @@ describe 'it should return the area of a triangle defined by three points' do
   end
 
   it 'should work with floats' do
-    triangle = three_points 1.5, 1.5, 5.5, 1.5, 5.5, 4.5
-    expect(area_of_triangle triangle[0], triangle[1], triangle[2]).to eq 6
+    triangle = three_points 1.1, 1.1, 5.5, 1.1, 5.5, 4.4
+    expect(area_of_triangle triangle[0], triangle[1], triangle[2]).to eq 7.26
   end
 
   it 'should work with negative numbers' do
